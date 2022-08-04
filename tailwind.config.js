@@ -5,7 +5,32 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        hero: "/",
+        heromobile: "/",
+      },
+      fontFamily: {
+        sans: [
+          "Inter",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "ui-sans-serif",
+          "system-ui",
+        ],
+      },
+      colors: {
+        bonewhite: "#E4E4E4",
+        primary: {
+          dark: "#101010",
+          medium: "#1B1A1A",
+          light: "#252526",
+        },
+        accent: "#43ADE9",
+      },
+    },
   },
   plugins: [],
 };
