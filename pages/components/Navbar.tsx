@@ -44,7 +44,7 @@ export default function Navbar() {
             </li>{" "}
             <li className=" py-1">
               <a
-                href=""
+                href="https://github.com/lbd1607"
                 target="_blank"
                 rel="noreferrer"
                 className="cursor-pointer"
@@ -54,7 +54,7 @@ export default function Navbar() {
             </li>
             <li className=" py-1 ">
               <a
-                href=""
+                href="https://www.linkedin.com/in/lauradavis-softwaredev/"
                 target="_blank"
                 rel="noreferrer"
                 className="cursor-pointer"
