@@ -13,23 +13,23 @@
     @apply float-left;
   }
   .navbar a {
-    @apply pb-2 text-left text-lg font-semibold text-bonewhite no-underline;
+    @apply pb-2 text-left text-lg font-semibold text-coolwhite no-underline;
   }
   .navbar a:hover {
     @apply text-accent;
   }
   .navbar .active > a {
-    @apply text-accent
+    @apply text-accent;
   }
   .navbar .active > a:hover {
-    @apply text-bonewhite;
+    @apply text-coolwhite;
   }
 
   .mobile-navbar {
     @apply w-full px-10;
   }
   .mobile-navbar a {
-    @apply text-left text-sm font-semibold text-bonewhite no-underline lg:px-3 px-4;
+    @apply text-left text-sm font-semibold text-coolwhite no-underline lg:px-3 px-4;
   }
   .mobile-navbar a:hover {
     @apply text-accent;
@@ -38,6 +38,6 @@
     @apply text-accent;
   }
   .mobile-navbar .active > a:hover {
-    @apply text-bonewhite;
+    @apply text-coolwhite;
   }
 }
