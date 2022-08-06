@@ -19,7 +19,6 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "react/react-in-jsx-scope": "off", //For Next
     "@typescript-eslint/no-non-null-assertion": "off",
     "react/prop-types": "off",
     "@typescript-eslint/no-empty-interface": "off",

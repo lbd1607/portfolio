@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { library } from "@fortawesome/fontawesome-svg-core";

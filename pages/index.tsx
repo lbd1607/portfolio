@@ -1,10 +1,10 @@
+import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import Navbar from "./components/Navbar";
 import Contact from "./contact";
 import Projects from "./projects";
+import Intro from "./components/Intro";
 
 const Home: NextPage = () => {
   return (
@@ -14,9 +14,11 @@ const Home: NextPage = () => {
         <meta name="description" content="Laura Davis - Software Dev" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="h-screen overflow-scroll bg-heromobile   bg-no-repeat lg:overflow-hidden lg:bg-hero lg:bg-right lg:bg-contain bg-contain bg-right-top">
+      <div className="h-screen overflow-scroll bg-heromobile   bg-no-repeat lg:bg-hero lg:bg-contain bg-contain bg-right">
         <Navbar />
+        <Intro />
       </div>
+
       <Projects />
       <Contact />
     </div>

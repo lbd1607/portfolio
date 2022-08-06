@@ -22,7 +22,7 @@ module.exports = {
         ],
       },
       colors: {
-        coolwhite: "#CFD6E9",
+        coolwhite: "#DFE4F2",
         primary: {
           dark: "#101010",
           medium: "#1B1A1A",
