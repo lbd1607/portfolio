@@ -10,7 +10,7 @@ export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const router = useRouter();
   return (
-    <nav className="mobile-navbar lg:navbar relative flex flex-wrap items-center justify-between  p-3 lg:bg-transparent lg:p-10 text-bonewhite">
+    <nav className="mobile-navbar lg:navbar  flex flex-wrap items-center justify-between  p-3 lg:bg-transparent lg:p-10 text-bonewhite fixed">
       <div className="container flex flex-wrap items-center justify-between px-4">
         <div className="relative flex w-full justify-between lg:static lg:block lg:w-auto lg:justify-start">
           <h3 className="flex cursor-pointer items-center text-2xl ">
@@ -37,10 +37,10 @@ export default function Navbar() {
         >
           <ul className="flex list-none flex-col  uppercase  lg:absolute  lg:right-0 lg:ml-auto lg:flex-row lg:px-16 mt-3 lg:mt-0">
             <li className="lg:px-2 py-1">
-              <Link href={"/projects"}>Projects</Link>
+              <Link href={"#projects"}>Projects</Link>
             </li>{" "}
             <li className="lg:px-2 py-1">
-              <Link href={"/contact"}>Contact</Link>
+              <Link href={"#contact"}>Contact</Link>
             </li>{" "}
             <li className=" py-1">
               <a
