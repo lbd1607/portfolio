@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        hero: "/",
-        heromobile: "/",
+        hero: "url(/hero.jpg)",
+        heromobile: "url(/heromobile.jpg)",
       },
       fontFamily: {
         sans: [

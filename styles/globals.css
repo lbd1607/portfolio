@@ -16,7 +16,7 @@
     @apply pb-2 text-left text-lg font-semibold text-bonewhite no-underline;
   }
   .navbar a:hover {
-    @apply text-gray-300;
+    @apply text-accent;
   }
   .navbar .active > a {
     @apply text-accent
@@ -32,7 +32,7 @@
     @apply text-left text-sm font-semibold text-bonewhite no-underline lg:px-3 px-4;
   }
   .mobile-navbar a:hover {
-    @apply text-gray-300;
+    @apply text-accent;
   }
   .mobile-navbar .active > a {
     @apply text-accent;
