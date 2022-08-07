@@ -13,7 +13,6 @@ module.exports = {
       fontFamily: {
         sans: [
           "Inter",
-          "Segoe UI",
           "Roboto",
           "Helvetica Neue",
           "Arial",
