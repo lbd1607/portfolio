@@ -28,6 +28,7 @@ module.exports = {
           light: "#252526",
         },
         accent: "#43ADE9",
+        accentdark: "#327EA8",
       },
     },
   },

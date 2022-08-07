@@ -22,11 +22,13 @@ const Home: NextPage = () => {
       <Projects />
       <Contact />
       <div className="text-coolwhite text-sm opacity-25 hover:opacity-80 text-right pr-2">
-        Background photo by{" "}
-        <a href="https://unsplash.com/@andreiamza2000" className="underline">
-          Amza Andrei
-        </a>{" "}
-        on Unsplash
+        <p>
+          Background photo by{" "}
+          <a href="https://unsplash.com/@andreiamza2000" className="underline">
+            Amza Andrei
+          </a>{" "}
+          on Unsplash
+        </p>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav
       className={
-        "mobile-navbar lg:navbar flex flex-wrap items-center justify-between bg-primary-medium p-3 lg:bg-transparent lg:p-10 text-coolwhite fixed"
+        "mobile-navbar lg:navbar flex flex-wrap items-center justify-between bg-primary-medium p-3 lg:bg-transparent lg:p-10 text-coolwhite absolute"
       }
     >
       <div className="container flex flex-wrap items-center justify-between px-4">

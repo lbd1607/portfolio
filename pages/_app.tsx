@@ -6,10 +6,11 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
   faBars,
   faChevronLeft,
-  faVideo,
+  faCirclePlay,
+  faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faGithub, faLinkedin, faChevronLeft, faBars, faVideo);
+library.add(faGithub, faLinkedin, faChevronLeft, faBars, faCirclePlay, faGlobe);
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
