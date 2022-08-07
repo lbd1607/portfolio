@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import Tooltip from "./Tooltip";
 
 type ProjectCardProps = {
   id: string;
@@ -62,45 +63,58 @@ const ProjectCard = ({
           id="card-description"
           className="h-[18rem] bg-primary-medium p-4 rounded-b-lg"
         >
-          <div id="icons" className="py-5">
-            <a
-              href={website}
-              target="_blank"
-              rel="noreferrer"
-              className="cursor-pointer"
-            >
-              <FontAwesomeIcon
-                icon="globe"
-                size="2x"
-                className="text-accent hover:text-accentdark pr-4"
-              />
-            </a>
-            <a
-              href={videoSrc}
-              target="_blank"
-              rel="noreferrer"
-              className="cursor-pointer"
-            >
-              <FontAwesomeIcon
-                icon="play-circle"
-                size="2x"
-                className="text-accent hover:text-accentdark pr-4"
-              />
-            </a>
-            {repoLink && (
+          <div id="icons" className="py-5 flex">
+            <div>
               <a
-                href={repoLink}
+                href={website}
                 target="_blank"
                 rel="noreferrer"
                 className="cursor-pointer"
               >
-                <FontAwesomeIcon
-                  icon={["fab", "github"]}
-                  size="2x"
-                  className="text-accent hover:text-accentdark pr-4"
-                />
+                <Tooltip message="Go to the live demo">
+                  <FontAwesomeIcon
+                    icon="globe"
+                    size="2x"
+                    className="text-accent hover:text-accentdark pr-4"
+                  />
+                </Tooltip>
               </a>
-            )}
+            </div>
+            <div>
+              <a
+                href={videoSrc}
+                target="_blank"
+                rel="noreferrer"
+                className="cursor-pointer"
+              >
+                {" "}
+                <Tooltip message="Watch a video demo">
+                  <FontAwesomeIcon
+                    icon="play-circle"
+                    size="2x"
+                    className="text-accent hover:text-accentdark pr-4"
+                  />
+                </Tooltip>
+              </a>
+            </div>
+            <div>
+              {repoLink && (
+                <a
+                  href={repoLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cursor-pointer"
+                >
+                  <Tooltip message="Check out the code">
+                    <FontAwesomeIcon
+                      icon={["fab", "github"]}
+                      size="2x"
+                      className="text-accent hover:text-accentdark pr-4"
+                    />
+                  </Tooltip>
+                </a>
+              )}
+            </div>
           </div>
 
           <p className="text-lg text-coolwhite">{description}</p>
