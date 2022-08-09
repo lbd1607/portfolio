@@ -8,9 +8,22 @@ import {
   faChevronLeft,
   faCirclePlay,
   faGlobe,
+  faAsterisk,
+  faCheck,
+  faCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faGithub, faLinkedin, faChevronLeft, faBars, faCirclePlay, faGlobe);
+library.add(
+  faGithub,
+  faLinkedin,
+  faChevronLeft,
+  faBars,
+  faCirclePlay,
+  faGlobe,
+  faAsterisk,
+  faCheck,
+  faCircle
+);
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
