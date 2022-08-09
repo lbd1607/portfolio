@@ -58,7 +58,7 @@ function Contact() {
             <span className="block text-lg text-coolwhite pb-2">Message</span>
             <textarea
               className={
-                "peer bg-primary-light text-coolwhite p-2 rounded-sm focus:focus-visible:outline-none focus:focus-visible:ring-2 focus:focus-visible:ring-accent w-full"
+                "peer bg-primary-light text-coolwhite p-2 rounded-sm focus:focus-visible:outline-none focus:focus-visible:ring-2 focus:focus-visible:ring-accent w-full h-80"
               }
               required
               maxLength={1000}

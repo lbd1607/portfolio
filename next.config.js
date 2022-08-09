@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  env: {
+    EMAIL: process.env.EMAIL,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
