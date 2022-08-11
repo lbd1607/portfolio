@@ -8,16 +8,16 @@ const Intro = () => {
       </h1>
       <div className="text-coolwhite w-44 lg:w-[27rem] text-lg">
         <p className="mb-5">
-          I&apos;m an intermediate-level software developer. Although I work
-          primarily on the frontend, I also have backend skills.{" "}
+          I am a software developer with a history of producing maintainable,
+          reusable code on time. While I&apos;ve focused primarily in front end
+          development, I have also developed my full stack skills outside of
+          work.
         </p>
         <p className="mb-5">
-          I currently work in React, TypeScript, GraphQL, and Relay. I&apos;m
-          also skilled in a variety of CSS frameworks like Tailwind, Styled
-          Components, and Bootstrap.
-        </p>{" "}
-        <p className="mb-5">
-          For personal projects like this one, I use either Next or Blitz.
+          I&apos;m skilled in React, NextJS, Typescript, GraphQL, and Relay.
+          I&apos;m also skilled in a variety of CSS frameworks like Tailwind,
+          Styled Components, and Bootstrap, and I have experience with UI/UX and
+          accessibility design.
         </p>
       </div>
     </div>
