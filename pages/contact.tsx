@@ -1,7 +1,29 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { BaseSyntheticEvent, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Contact() {
+  const recaptchaRef = useRef<any>();
+
+  const handleOnSubmit = async (event: BaseSyntheticEvent) => {
+    event.preventDefault();
+
+    const token = await recaptchaRef.current.executeAsync();
+
+    const formData: Record<string, string> = {};
+    Array.from(event.target).forEach((field: any) => {
+      if (!field.name) return;
+      formData[field.name] = field.value;
+      formData.token = token;
+    });
+    fetch("/api/mail", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    });
+    recaptchaRef.current.reset();
+    event.target.reset();
+  };
+
   return (
     <div
       id="contact"
@@ -15,10 +37,24 @@ function Contact() {
           If you like my work and you think that I&apos;d be a good fit for your
           team, send me a message!
         </p>
-        <form>
+        <form method="POST" onSubmit={handleOnSubmit}>
+          <div
+            className="g-recaptcha"
+            data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            data-callback="onSubmit"
+            data-size="invisible"
+          >
+            <ReCAPTCHA
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}
+              size="invisible"
+              ref={recaptchaRef}
+              theme="dark"
+            />
+          </div>
           <label className="block p-5">
             <span className="block text-lg text-coolwhite pb-2">Name</span>
             <input
+              name="name"
               type="name"
               className="peer bg-primary-light text-coolwhite p-2 rounded-sm focus:focus-visible:outline-none focus:focus-visible:ring-2 focus:focus-visible:ring-accent w-full"
               required
@@ -32,6 +68,7 @@ function Contact() {
               Email address
             </span>
             <input
+              name="email"
               type="email"
               className="peer bg-primary-light text-coolwhite p-2 rounded-sm focus:focus-visible:outline-none focus:focus-visible:ring-2 focus:focus-visible:ring-accent w-full"
               required
@@ -46,6 +83,7 @@ function Contact() {
               Your company
             </span>
             <input
+              name="company"
               type="text"
               className="peer bg-primary-light text-coolwhite p-2 rounded-sm focus:focus-visible:outline-none focus:focus-visible:ring-2 focus:focus-visible:ring-accent w-full"
               required
@@ -57,6 +95,7 @@ function Contact() {
           <label className="p-5 block">
             <span className="block text-lg text-coolwhite pb-2">Message</span>
             <textarea
+              name="message"
               className={
                 "peer bg-primary-light text-coolwhite p-2 rounded-sm focus:focus-visible:outline-none focus:focus-visible:ring-2 focus:focus-visible:ring-accent w-full h-80"
               }
@@ -69,7 +108,7 @@ function Contact() {
           <div className="grid grid-rows-2 p-5">
             <button
               type="submit"
-              className="h-10 bg-accent hover:bg-accentdark w-20 rounded-sm "
+              className="h-10 bg-accent hover:bg-accentdark w-20 rounded-sm"
             >
               Send
             </button>
