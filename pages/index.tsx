@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
       <Projects />
       <Contact />
-      <div className="text-coolwhite text-sm opacity-25 hover:opacity-80 text-right pr-2">
+      <div className="text-coolwhite text-sm opacity-25 hover:opacity-80 text-left pr-2 m-5">
         <p>
           Background photo by{" "}
           <a href="https://unsplash.com/@andreiamza2000" className="underline">

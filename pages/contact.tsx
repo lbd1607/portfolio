@@ -5,7 +5,7 @@ function Contact() {
   return (
     <div
       id="contact"
-      className="lg:my-0 lg:flex lg:grid-flow-row lg:m-12 m-8 lg:justify-center lg:mt-64 lg:mb-64"
+      className="lg:my-0 lg:flex lg:grid-flow-row lg:m-12 m-8 lg:justify-center lg:mt-64 lg:mb-36"
     >
       <div
         id="form-container"
@@ -18,7 +18,7 @@ function Contact() {
         <Form>
           <Form.TextField
             elementType="input"
-            fieldLabel="Your name"
+            fieldLabel="Name"
             fieldName="name"
             type="text"
             isRequired={true}

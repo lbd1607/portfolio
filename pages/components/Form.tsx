@@ -1,6 +1,7 @@
-import React, { BaseSyntheticEvent, useRef } from "react";
+import React, { BaseSyntheticEvent, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import FormValidationIcons from "./FormValidationIcons";
+import SubmitMsg from "./SubmitMsg";
 
 type ElementType = "input" | "textarea";
 
@@ -70,6 +71,8 @@ const Button = ({ type, label }: ButtonProps) => {
 };
 
 const Form = ({ children }: any) => {
+  const [submitStatus, setSumbitStatus] = useState<string | undefined>();
+  const [senderName, setSenderName] = useState<string | undefined>();
   const recaptchaRef = useRef<any>();
 
   const handleOnSubmit = async (event: BaseSyntheticEvent) => {
@@ -83,12 +86,18 @@ const Form = ({ children }: any) => {
       formData[field.name] = field.value;
       formData.token = token;
     });
-    fetch("/api/mail", {
+    const response = await fetch("/api/mail", {
       method: "POST",
       body: JSON.stringify(formData),
     });
+
+    setSumbitStatus(response.status.toString());
+    setSenderName(formData.name);
+
     recaptchaRef.current.reset(); //Needs to be reset each time so the recaptcha can run on each sumbit
     event.target.reset();
+
+    return response;
   };
   return (
     <form method="POST" onSubmit={handleOnSubmit}>
@@ -106,6 +115,7 @@ const Form = ({ children }: any) => {
           theme="dark"
         />
       </div>
+      <SubmitMsg submitStatus={submitStatus} senderName={senderName} />
     </form>
   );
 };
