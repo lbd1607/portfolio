@@ -36,7 +36,7 @@ async function mailApi(req: NextApiRequest, res: NextApiResponse) {
 
   const data = {
     to: `${myEmail}`,
-    from: "contact@lauradavis.dev <contact@lauradavis.dev>",
+    from: `contact-${body.company}@lauradavis.dev <contact@lauradavis.dev>`,
     subject: "We're interested!",
     text: message,
     html: message.replace(/\r\n/g, "<br/>"),
