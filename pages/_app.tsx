@@ -11,6 +11,7 @@ import {
   faAsterisk,
   faCheck,
   faCircle,
+  faTimesCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -22,7 +23,8 @@ library.add(
   faGlobe,
   faAsterisk,
   faCheck,
-  faCircle
+  faCircle,
+  faTimesCircle
 );
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -1,12 +1,11 @@
 import React from "react";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import ProjectCard from "./components/ProjectCard";
 
 function Projects() {
   return (
     <div
       id="projects"
-      className="lg:my-0 my-48 lg:flex lg:grid-flow-row lg:grid-cols-3 lg:gap-44 lg:m-12 m-8 lg:justify-center"
+      className="lg:my-0 my-48 lg:flex lg:grid-flow-row lg:grid-cols-3 lg:gap-44 lg:m-12 m-4 lg:justify-center"
     >
       <ProjectCard
         id="fitplan"
@@ -16,7 +15,7 @@ function Projects() {
         }
         desktopScreenshot={"/fitplan-desktop.jpg"}
         website={"https://fit-plan-2.vercel.app/"}
-        videoSrc={""}
+        videoSrc={"/fitplan-demo.mp4"}
         repoLink={"https://github.com/lbd1607/FITplan-2"}
       />
       <ProjectCard
@@ -28,21 +27,8 @@ function Projects() {
         desktopScreenshot={"/cdv4democracy-desktop.jpg"}
         mobileScreenshot={"/cdv4democracy-mobile.jpg"}
         website={"https://www.cdv4democracy.com/"}
-        videoSrc={""}
+        videoSrc={"/cdv-demo.mp4"}
       />
-      {/* TBI: Add this after api project is deployed
-       <ProjectCard
-        id="funapi"
-        title={"API Fun"}
-        description={
-          "A small app built with Next. I created this project to prove that I can build and work with APIs."
-        }
-        desktopScreenshot={""}
-        mobileScreenshot={""}
-        website={""}
-        videoSrc={""}
-        repoLink={""}
-      /> */}
     </div>
   );
 }

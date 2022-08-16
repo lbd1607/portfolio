@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Tooltip from "./Tooltip";
+import { HomepageContext } from "..";
 
 type ProjectCardProps = {
   id: string;
@@ -11,8 +12,8 @@ type ProjectCardProps = {
   desktopScreenshot?: string;
   mobileScreenshot?: string;
   website: string;
-  videoSrc: string;
   repoLink?: string;
+  videoSrc: string;
 };
 
 const ProjectCard = ({
@@ -22,9 +23,16 @@ const ProjectCard = ({
   desktopScreenshot,
   mobileScreenshot,
   website,
-  videoSrc,
   repoLink,
+  videoSrc,
 }: ProjectCardProps) => {
+  const { setIsVideoOpen, setVideoSrc } = useContext(HomepageContext);
+
+  const handleOpenVideo = () => {
+    setIsVideoOpen(true);
+    setVideoSrc(videoSrc);
+  };
+
   return (
     <div className="container w-[22rem] my-16 lg:pt-52" id={id}>
       <div
@@ -33,6 +41,7 @@ const ProjectCard = ({
       >
         {title}
       </div>
+
       <div id="card-main">
         <div
           id="card-screenshot"
@@ -48,6 +57,7 @@ const ProjectCard = ({
               />
             )}
           </div>
+
           <div>
             {mobileScreenshot && (
               <Image
@@ -81,12 +91,7 @@ const ProjectCard = ({
               </a>
             </div>
             <div>
-              <a
-                href={videoSrc}
-                target="_blank"
-                rel="noreferrer"
-                className="cursor-pointer"
-              >
+              <button className="cursor-pointer" onClick={handleOpenVideo}>
                 {" "}
                 <Tooltip message="Watch a video demo">
                   <FontAwesomeIcon
@@ -95,7 +100,7 @@ const ProjectCard = ({
                     className="text-accent hover:text-accentdark pr-4"
                   />
                 </Tooltip>
-              </a>
+              </button>
             </div>
             <div>
               {repoLink && (
