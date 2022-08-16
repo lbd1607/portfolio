@@ -29,6 +29,18 @@ function Projects() {
         website={"https://www.cdv4democracy.com/"}
         videoSrc={"/cdv-demo.mp4"}
       />
+      <ProjectCard
+        id="portfolio"
+        title={"Portfolio"}
+        description={
+          "A portfolio built with Next and Tailwind. In the demo video, I give a brief rundown of the work I put in to this portfolio."
+        }
+        desktopScreenshot={"/portfolio-desktop.jpg"}
+        mobileScreenshot={"/portfolio-mobile.jpg"}
+        website={"https://www.lauradavis.dev/"}
+        videoSrc={"/portfolio-demo.mp4"}
+        repoLink={"https://github.com/lbd1607/lauradavis-softwaredev"}
+      />
     </div>
   );
 }
