@@ -39,7 +39,7 @@ function Projects() {
         mobileScreenshot={"/portfolio-mobile.jpg"}
         website={"https://www.lauradavis.dev/"}
         videoSrc={"/portfolio-demo.mp4"}
-        repoLink={"https://github.com/lbd1607/lauradavis-softwaredev"}
+        repoLink={"https://github.com/lbd1607/portfolio"}
       />
     </div>
   );
