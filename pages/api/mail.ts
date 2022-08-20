@@ -17,7 +17,7 @@ async function validateHuman(token: string): Promise<boolean> {
 }
 
 async function mailApi(req: NextApiRequest, res: NextApiResponse) {
-  const body = JSON.parse(req.body);
+  const body = await JSON.parse(req.body);
 
   const isHuman = await validateHuman(body.token);
 
