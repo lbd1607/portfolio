@@ -42,7 +42,7 @@ async function mailApi(req: NextApiRequest, res: NextApiResponse) {
     html: message.replace(/\r\n/g, "<br/>"),
   };
 
-  mail.send(data);
+  await mail.send(data);
   res.status(200).json({ status: "Ok" });
 }
 
