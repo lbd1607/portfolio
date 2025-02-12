@@ -29,8 +29,6 @@ const Home: NextPage = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [videoSrc, setVideoSrc] = useState("");
 
-  console.log(videoSrc, isVideoOpen); //TBI: Remove
-
   const createOpenVideo = useTransition(isVideoOpen, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
