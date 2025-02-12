@@ -44,7 +44,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Laura Davis - Software Dev" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="h-[100vh] bg-contain bg-no-repeat bg-hero bg-fixed bg-right z-10">
+      <div className="h-[100vh] lg:bg-contain bg-no-repeat bg-hero bg-fixed lg:bg-right-top bg-center bg-cover z-10">
         <Navbar />
         <Intro />
       </div>
