@@ -36,7 +36,7 @@ export default function Navbar() {
                 <span className="flex px-2"></span>
               </div>
             </Link>
-          </h3>{" "}
+          </h3>
           <ul
             className={
               "flex list-none flex-col  uppercase  lg:absolute  lg:right-0 lg:ml-auto lg:flex-row lg:px-16 mt-3 lg:mt-0"
