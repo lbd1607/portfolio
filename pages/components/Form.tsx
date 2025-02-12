@@ -1,4 +1,4 @@
-import React, { BaseSyntheticEvent, useRef, useState } from "react";
+import { BaseSyntheticEvent, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import FormValidationIcons from "./FormValidationIcons";
 import SubmitMsg from "./SubmitMsg";
@@ -71,7 +71,7 @@ const Button = ({ type, label }: ButtonProps) => {
 };
 
 const Form = ({ children }: any) => {
-  const [submitStatus, setSumbitStatus] = useState<string | undefined>();
+  const [submitStatus, setSubmitStatus] = useState<string | undefined>();
   const [senderName, setSenderName] = useState<string | undefined>();
   const recaptchaRef = useRef<any>();
 
@@ -91,10 +91,10 @@ const Form = ({ children }: any) => {
       body: JSON.stringify(formData),
     });
 
-    setSumbitStatus(response.status.toString());
+    setSubmitStatus(response.status.toString());
     setSenderName(formData.name);
 
-    recaptchaRef.current.reset(); //Needs to be reset each time so the recaptcha can run on each sumbit
+    recaptchaRef.current.reset(); //Needs to be reset each time so the recaptcha can run on each submit
     event.target.reset();
 
     return response;
