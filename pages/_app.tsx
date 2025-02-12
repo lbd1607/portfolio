@@ -1,20 +1,24 @@
-import React from "react";
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
+  faGithub,
+  faLinkedin,
+  faMedium,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faAsterisk,
   faBars,
+  faCheck,
   faChevronLeft,
+  faCircle,
   faCirclePlay,
   faGlobe,
-  faAsterisk,
-  faCheck,
-  faCircle,
   faTimesCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import type { AppProps } from "next/app";
+import "../styles/globals.css";
 
 library.add(
+  faMedium,
   faGithub,
   faLinkedin,
   faChevronLeft,

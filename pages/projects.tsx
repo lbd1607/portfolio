@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectCard from "./components/ProjectCard";
 
 function Projects() {
@@ -26,7 +25,7 @@ function Projects() {
         }
         desktopScreenshot={"/cdv4democracy-desktop.jpg"}
         mobileScreenshot={"/cdv4democracy-mobile.jpg"}
-        website={"https://www.cdv4democracy.com/"}
+        website={"https://cdv4democracy.vercel.app/"}
         videoSrc={"/cdv-demo.mp4"}
       />
       <ProjectCard
@@ -37,7 +36,7 @@ function Projects() {
         }
         desktopScreenshot={"/portfolio-desktop.jpg"}
         mobileScreenshot={"/portfolio-mobile.jpg"}
-        website={"https://www.lauradavis.dev/"}
+        website={"https://portfolio-lbd1607.vercel.app/"}
         videoSrc={"/portfolio-demo.mp4"}
         repoLink={"https://github.com/lbd1607/portfolio"}
       />

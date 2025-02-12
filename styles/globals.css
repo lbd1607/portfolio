@@ -40,4 +40,16 @@
   .mobile-navbar .active > a:hover {
     @apply text-coolwhite;
   }
+  .mobile-navbar h3:hover {
+    @apply text-accent;
+  }
+  .hero-background {
+    background: linear-gradient(
+      53.35deg,
+      #090909 41.18%,
+      #131313 47.07%,
+      #151515 49.89%,
+      #1b1b1b 55.07%
+    );
+  }
 }

@@ -1,7 +1,7 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import React from "react";
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -36,7 +36,7 @@ export default function Navbar() {
                 <span className="flex px-2"></span>
               </div>
             </Link>
-          </h3>{" "}
+          </h3>
           <ul
             className={
               "flex list-none flex-col  uppercase  lg:absolute  lg:right-0 lg:ml-auto lg:flex-row lg:px-16 mt-3 lg:mt-0"
@@ -48,6 +48,16 @@ export default function Navbar() {
             <li className="lg:px-2 py-1">
               <Link href={"#contact"}>Contact</Link>
             </li>{" "}
+            <li className=" py-1">
+              <a
+                href="https://medium.com/@davislaura"
+                target="_blank"
+                rel="noreferrer"
+                className="cursor-pointer"
+              >
+                <FontAwesomeIcon icon={["fab", "medium"]} size="lg" />
+              </a>
+            </li>
             <li className=" py-1">
               <a
                 href="https://github.com/lbd1607"

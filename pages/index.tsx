@@ -1,18 +1,13 @@
-import React, {
-  createContext,
-  Dispatch,
-  SetStateAction,
-  useState,
-} from "react";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { createContext, Dispatch, SetStateAction, useState } from "react";
+import { animated, config, useTransition } from "react-spring";
+import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 import Contact from "./contact";
 import Projects from "./projects";
-import Intro from "./components/Intro";
-import { useTransition, animated, config } from "react-spring";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 
 type HomepageContextTypes = {
   isVideoOpen: boolean;
@@ -34,8 +29,6 @@ const Home: NextPage = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [videoSrc, setVideoSrc] = useState("");
 
-  console.log(videoSrc, isVideoOpen); //TBI: Remove
-
   const createOpenVideo = useTransition(isVideoOpen, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
@@ -44,13 +37,14 @@ const Home: NextPage = () => {
   });
 
   return (
-    <div className="bg-primary-dark flex flex-col ">
+    <div className="bg-primary-dark flex flex-col">
+      <div className="hero-background absolute h-[100vh] w-full" />
       <Head>
-        <title>Laura Davis - Sofware Dev</title>
+        <title>Laura Davis - Software Dev</title>
         <meta name="description" content="Laura Davis - Software Dev" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="h-screen bg-heromobile bg-no-repeat lg:bg-hero lg:bg-contain bg-contain bg-right">
+      <div className="h-[100vh] lg:bg-contain bg-no-repeat bg-hero bg-fixed lg:bg-right-top bg-center bg-cover z-10">
         <Navbar />
         <Intro />
       </div>
@@ -69,8 +63,11 @@ const Home: NextPage = () => {
 
         <p className="text-coolwhite text-sm opacity-25 hover:opacity-80 text-left ">
           Background photo by{" "}
-          <a href="https://unsplash.com/@andreiamza2000" className="underline">
-            Amza Andrei
+          <a
+            href="https://unsplash.com/@sapphodb?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            className="underline"
+          >
+            Sappho Bakker
           </a>{" "}
           on Unsplash
         </p>
