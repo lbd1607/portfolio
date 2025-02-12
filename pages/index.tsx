@@ -37,13 +37,14 @@ const Home: NextPage = () => {
   });
 
   return (
-    <div className="bg-primary-dark flex flex-col ">
+    <div className="bg-primary-dark flex flex-col">
+      <div className="hero-background absolute h-[100vh] w-full" />
       <Head>
-        <title>Laura Davis - Sofware Dev</title>
+        <title>Laura Davis - Software Dev</title>
         <meta name="description" content="Laura Davis - Software Dev" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="h-screen bg-heromobile bg-no-repeat lg:bg-hero lg:bg-contain bg-contain bg-right">
+      <div className="h-[100vh] bg-contain bg-no-repeat bg-hero bg-fixed bg-right z-10">
         <Navbar />
         <Intro />
       </div>

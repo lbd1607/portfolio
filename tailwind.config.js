@@ -8,7 +8,6 @@ module.exports = {
     extend: {
       backgroundImage: {
         hero: "url(/hero.jpg)",
-        heromobile: "url(/heromobile.jpg)",
       },
       fontFamily: {
         sans: [
@@ -23,7 +22,7 @@ module.exports = {
       colors: {
         coolwhite: "#DFE4F2",
         primary: {
-          dark: "#101010",
+          dark: "#080808",
           medium: "#1B1A1A",
           light: "#252526",
         },
