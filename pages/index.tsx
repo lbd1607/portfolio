@@ -1,18 +1,13 @@
-import React, {
-  createContext,
-  Dispatch,
-  SetStateAction,
-  useState,
-} from "react";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { createContext, Dispatch, SetStateAction, useState } from "react";
+import { animated, config, useTransition } from "react-spring";
+import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 import Contact from "./contact";
 import Projects from "./projects";
-import Intro from "./components/Intro";
-import { useTransition, animated, config } from "react-spring";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 
 type HomepageContextTypes = {
   isVideoOpen: boolean;
@@ -69,8 +64,11 @@ const Home: NextPage = () => {
 
         <p className="text-coolwhite text-sm opacity-25 hover:opacity-80 text-left ">
           Background photo by{" "}
-          <a href="https://unsplash.com/@andreiamza2000" className="underline">
-            Amza Andrei
+          <a
+            href="https://unsplash.com/@sapphodb?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            className="underline"
+          >
+            Sappho Bakker
           </a>{" "}
           on Unsplash
         </p>
