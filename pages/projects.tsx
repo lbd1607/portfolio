@@ -25,7 +25,7 @@ function Projects() {
         }
         desktopScreenshot={"/cdv4democracy-desktop.jpg"}
         mobileScreenshot={"/cdv4democracy-mobile.jpg"}
-        website={"https://www.cdv4democracy.com/"}
+        website={"https://cdv4democracy.vercel.app/"}
         videoSrc={"/cdv-demo.mp4"}
       />
       <ProjectCard
