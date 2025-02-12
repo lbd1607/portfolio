@@ -50,7 +50,7 @@ export default function Navbar() {
             </li>{" "}
             <li className=" py-1">
               <a
-                href="medium.com/@davislaura"
+                href="https://medium.com/@davislaura"
                 target="_blank"
                 rel="noreferrer"
                 className="cursor-pointer"
